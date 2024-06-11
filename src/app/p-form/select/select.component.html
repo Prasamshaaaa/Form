@@ -1,0 +1,14 @@
+<div class="form-group">
+  <label for="{{ formControlName }}">{{ label }}:</label>
+  <select
+    class="form-control"
+    [formControl]="formControl"
+    [id]="formControlName"
+  >
+    <option value="" disabled selected>Select {{ placeholder }}</option>
+
+    <option *ngFor="let option of options" [value]="option.Options">
+      {{ option.Options }}
+    </option>
+  </select>
+</div>
