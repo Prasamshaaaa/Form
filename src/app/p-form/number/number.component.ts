@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-number',
@@ -6,9 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./number.component.css']
 })
 export class NumberComponent {
-@Input() label!:string;
-@Input() formControlName!: string;
-constructor(){}
-ngOnInit(): void {}
+  @Input() label!: string;
+  @Input() formControlName!: string;
+  @Input() formControl!: FormControl;
+  constructor() { }
+  ngOnInit(): void { }
 
 }

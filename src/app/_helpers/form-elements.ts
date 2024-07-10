@@ -3,7 +3,10 @@ export interface IFormElments {
     Element: string;
     ElementType: formElementType;
     DisplayOrder: number;
-    SelectOptions?: Array<SelectOption<any>>;
+    Required?: boolean;
+    MinLength?: number;
+    MaxLength?: number;
+    Pattern?: string; SelectOptions?: Array<SelectOption<any>>;
 }
 
 export class SelectOption<T> {
@@ -16,4 +19,4 @@ export interface IForms {
 }
 
 export type formLayoutStrings = "vertical" | "horizontal" | "inline";
-export type formElementType = "Text" | "Email" | "Password" | "Number" | "Submit" | "Select";
+export type formElementType = "Text" | "Email" | "Password" | "Number" | "Submit" | "Select" | "Radio" | "Checkbox" | "Date" | "Textarea" | "File" | "Heading" | "Number";

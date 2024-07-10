@@ -1,21 +1,28 @@
-
+.form {
+  margin-bottom: 20px;
+}
 .form-group {
-    margin-bottom: 15px;
-    display:flex;
-  }
-  
-  label {
-    width: 100px; 
-    display: block;
-    font-weight: bold;
-  }
-  
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  
+  display: flex;
+}
+
+label {
+  width: 100px;
+  display: block;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+textarea {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.text-danger {
+  color: red;
+  font-size: 0.875rem;
+  margin-left: 56px;
+  margin-top: 0px;
+}

@@ -1,0 +1,36 @@
+<div class="form">
+  <div class="form-group">
+    <label>{{ label }}:</label>
+    <div class="checkbox-group">
+      <div *ngFor="let option of options">
+        <input
+          type="checkbox"
+          [formControl]="formControl"
+          [value]="option.Options"
+          [id]="option.Options"
+          name="{{ formControlName }}"
+          (ngModelChange)="OnSubjectSelected($event, option.Options)"
+        />
+        <label [for]="option.Options">{{ option.Options }}</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Validation error messages -->
+  <div *ngIf="formControl.invalid && formControl.touched" class="text-danger">
+    <div *ngIf="formControl.errors?.['required']" class="text-danger">
+      {{ label }} is required.
+    </div>
+    <div *ngIf="formControl.errors?.['minlength']" class="text-danger">
+      {{ label }} should be at least
+      {{ formControl.errors?.['minlength'].requiredLength }} characters.
+    </div>
+    <div *ngIf="formControl.errors?.['maxlength']" class="text-danger">
+      {{ label }} should not exceed
+      {{ formControl.errors?.['maxlength'].requiredLength }} characters.
+    </div>
+    <div *ngIf="formControl.errors?.['pattern']" class="text-danger">
+      Invalid {{ label }}.
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.form {
+  margin-bottom: 20px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  width: 100px;
+  display: block;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group label {
+  margin: 0;
+}
+
+.text-danger {
+  color: red;
+  font-size: 0.875rem;
+  margin-left: 56px;
+  margin-top: 0px;
+}

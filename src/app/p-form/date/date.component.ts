@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-date',
@@ -6,8 +7,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./date.component.css']
 })
 export class DateComponent {
-  @Input() label!:string;
+  @Input() label!: string;
   @Input() formControlName!: string;
-  constructor(){}
-  ngOnInit(): void {}
+  @Input() placeholder!: string;
+  @Input() formControl!: FormControl;
+  constructor() { }
+  ngOnInit(): void { }
 }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-textarea',
@@ -10,9 +11,10 @@ export class TextareaComponent {
   @Input() label!: string;  //!= This denotes that the property will be initialized later
   @Input() formControlName!: string;
   @Input() placeholder!: string;
+  @Input() formControl!: FormControl;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit( ): void { }
+  ngOnInit(): void { }
 
 }

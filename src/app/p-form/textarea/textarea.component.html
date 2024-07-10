@@ -1,9 +1,30 @@
-<div class="form-group">
-  <label for="Text">{{ label }}:</label>
-  <textarea
-    class="form-control"
-    placeholder="{{ placeholder }}"
-    rows="15"
-    cols="100"
-  ></textarea>
+<div class="form">
+  <div class="form-group">
+    <label for="Text">{{ label }}:</label>
+    <textarea
+      class="form-control"
+      placeholder="{{ placeholder }}"
+      rows="15"
+      cols="100"
+      [formControl]="formControl"
+    ></textarea>
+  </div>
+
+  <!-- Validation error messages -->
+  <div *ngIf="formControl.invalid && formControl.touched" class="text-danger">
+    <div *ngIf="formControl.errors?.['required']" class="text-danger">
+      {{ label }} is required.
+    </div>
+    <div *ngIf="formControl.errors?.['minlength']" class="text-danger">
+      {{ label }} should be at least
+      {{ formControl.errors?.['minlength'].requiredLength }} characters.
+    </div>
+    <div *ngIf="formControl.errors?.['maxlength']" class="text-danger">
+      {{ label }} should not exceed
+      {{ formControl.errors?.['maxlength'].requiredLength }} characters.
+    </div>
+    <div *ngIf="formControl.errors?.['pattern']" class="text-danger">
+      Invalid {{ label }}.
+    </div>
+  </div>
 </div>

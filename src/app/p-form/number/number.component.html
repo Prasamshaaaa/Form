@@ -1,4 +1,23 @@
-<div class="form-group">
-    <label>Number:</label>
-    <input type="number" [formControlName]="formControlName" class="form-control" />
+<div class="form">
+  <div class="form-group">
+    <label for="number">{{ label }}:</label>
+    <input type="number" class="form-control" [formControl]="formControl" />
+  </div>
+  <!-- Validation error messages -->
+  <div *ngIf="formControl.invalid && formControl.touched" class="text-danger">
+    <div *ngIf="formControl.errors?.['required']" class="text-danger">
+      {{ label }} is required.
+    </div>
+    <div *ngIf="formControl.errors?.['minlength']" class="text-danger">
+      {{ label }} should be at least
+      {{ formControl.errors?.['minlength'].requiredLength }} characters.
+    </div>
+    <div *ngIf="formControl.errors?.['maxlength']" class="text-danger">
+      {{ label }} should not exceed
+      {{ formControl.errors?.['maxlength'].requiredLength }} characters.
+    </div>
+    <div *ngIf="formControl.errors?.['pattern']" class="text-danger">
+      Invalid {{ label }}.
+    </div>
+  </div>
 </div>

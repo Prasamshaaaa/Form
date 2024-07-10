@@ -1,5 +1,7 @@
-.form-group {
+.form {
   margin-bottom: 20px;
+}
+.form-group {
   display: flex;
 }
 
@@ -21,4 +23,11 @@ select {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.text-danger {
+  color: red;
+  font-size: 0.875rem;
+  margin-left: 56px;
+  margin-top: 0px;
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { FileComponent } from './p-form/file/file.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { ErrorComponent } from './p-form/error/error.component';
+import { HeadingComponent } from './p-form/heading/heading.component';
 
 
 @NgModule({
@@ -34,12 +36,14 @@ import { ErrorComponent } from './p-form/error/error.component';
     DateComponent,
     FileComponent,
     ButtonComponent,
-    ErrorComponent
+    ErrorComponent,
+    HeadingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

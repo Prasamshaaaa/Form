@@ -1,0 +1,41 @@
+.form {
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  width: 100px;
+  display: block;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group div {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.checkbox-group label {
+  margin: 0;
+}
+
+.text-danger {
+  color: red;
+  font-size: 0.875rem;
+  margin-left: 56px;
+  margin-top: 0px;
+}

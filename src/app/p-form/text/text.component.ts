@@ -11,9 +11,9 @@ export class TextComponent implements OnInit {
   @Input() placeholder!: string;
   @Input() formControlName!: string;
   @Input() formControl!: FormControl;
+  @Input() getErrorMessage!: () => string | null;
+  constructor() { }
 
-  constructor() {}
-
-  ngOnInit( ): void {}
+  ngOnInit(): void { }
 
 }
